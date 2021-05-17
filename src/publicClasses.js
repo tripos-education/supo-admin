@@ -12,6 +12,8 @@ import {
   ReferenceField,
   ReferenceInput,
   TextField,
+  BooleanField,
+  FunctionField,
   TextInput,
   ShowButton,
   EditButton,
@@ -44,6 +46,10 @@ export const ClassList = (props) => (
       <TextField source="groupName" />
       <TextField source="createdAt" />
       <TextField source="updatedAt" />
+      <FunctionField source="teachers" label="Teachers?" render={(record, source) => 
+        <BooleanField record={{...record, teachers: record.teachers?.length > 0}} source={source}/>
+      }
+        />
       <ShowButton label="" />
       <EditButton label="" />
       <DeleteButton label="" redirect={false}/>
