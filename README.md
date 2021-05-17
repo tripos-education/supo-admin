@@ -9,7 +9,7 @@ password: password
 ```
 
 # Get started
-You need to add the private Firebase connection file: `src/FIREBASE_CONFIG.js` with the following format from firebase:
+You need to add the private Firebase connection file: `src/firebase-config.js` with the following format from firebase:
 
 ``` js
 export const firebaseConfig = {
